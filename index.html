@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut icon" type="img" href="./img">
+    <title>Encoding and Decoding</title>
+</head>
+
+<body>
+
+    <h1>Encoding and Decoding</h1>
+    
+
+    <form action="">
+        <fieldset>
+            <textarea id="txt" name="txt" rows="4" cols="50" placeholder="Enter your message here:"></textarea>
+            <br><br>
+
+            <select name="tipoCodigo" id="tipoCodigo" required>
+                <option value="noValue" disabled selected>Select an option</option>
+                <option value="cesar">Cifra de César</option>
+                <option value="base64">Base64</option>
+            </select><br><br>
+
+
+            <div class="inc" style="display: none" id="valInc">
+                <p>Incremento da cifra:</p>
+                <input type="number" class="inputInc" id="numeroInc" default="0" min="1" value="1">
+                <br>
+            </div>
+
+            <input type="radio" name="codeDecode" id="code" value="code"> Code<br>
+            <input type="radio" name="codeDecode" id="decode" value="decode"> Decode<br><br>
+
+            <button type="submit" class="btn" name="codeMsg" id="btn">Code here!</button>
+
+            <br><br>
+            <textarea id="res" class="res" name="res" rows="4" cols="50"></textarea>
+        </fieldset>
+    </form>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
